@@ -1,33 +1,179 @@
 * {
   margin: 0;
   padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-	--pink: #D658B3;
-	--green: #45B442;
-	--gray-700: #332B31;
-	--gray-600: #4A4448;
-	--gray-500: #756C71;
-	--gray-400: #D3CFD2;
-	--gray-300: #DFDCDF;
-	--gray-200: #E9E7E9;
-	--gray-100: #F4F1F2;
-	--white: #FFFFFF;
-	--gradient-base: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
+  --pink: #d658b3;
+  --green: #45b442;
+  --gray-700: #332b31;
+  --gray-600: #4a4448;
+  --gray-500: #756c71;
+  --gray-400: #d3cfd2;
+  --gray-300: #dfdcdf;
+  --gray-200: #e9e7e9;
+  --gray-100: #f4f1f2;
+  --white: #ffffff;
+  --gradient-base: linear-gradient(
+    90deg,
+    #2daa6e 0%,
+    #2daaaa 33.33%,
+    #856ccf 66.67%,
+    #d658b3 100%
+  );
 
-	--font-family: 'Oxygen', sans-serif;
-	--title-md: 700 24px/140% var(--font-family);
-	--title-sm: 700 18px/140% var(--font-family);
-	--subtitle-md: 700 14px/140% var(--font-family);
-	--subtitle-sm: 700 12px/140% var(--font-family);
-	--text-md: 400 16px/140% var(--font-family);
-	--text-sm: 400 14px/140% var(--font-family);
-	--text-xs: 400 12px/140% var(--font-family); 
+  --font-family: "Oxygen", sans-serif;
+  --title-md: 700 24px/140% var(--font-family);
+  --title-sm: 700 18px/140% var(--font-family);
+  --subtitle-md: 700 14px/140% var(--font-family);
+  --subtitle-sm: 700 12px/140% var(--font-family);
+  --text-md: 400 16px/140% var(--font-family);
+  --text-sm: 400 14px/140% var(--font-family);
+  --text-xs: 400 12px/140% var(--font-family);
+}
 
-	body {
-		background-color: var(--gray-200);
-		font-family: var(--font-family);
-	}
+body {
+  background-color: var(--gray-200);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Layout desktop */
+@media (min-width: 769px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo"
+      "search search"
+      "user loyalty"
+      "history cuts";
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    grid-area: logo;
+    text-align: center;
+  }
+
+  .search {
+    grid-area: search;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .search button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .user-info {
+    grid-area: user;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .history {
+    grid-area: history;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .loyalty-card {
+    grid-area: loyalty;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .cuts-remaining {
+    grid-area: cuts;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+/* Layout mobile */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .search {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .search input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .search button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 4px;
+  }
+
+  .user-info,
+  .loyalty-card,
+  .cuts-remaining,
+  .history {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Ordem Mobile */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cuts-remaining {
+    order: 3;
+  }
+
+  .history {
+    order: 4;
+  }
 }
