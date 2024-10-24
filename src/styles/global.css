@@ -72,6 +72,10 @@ body {
   align-items: center;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 /* Layout desktop */
 
 /* HEADER */
@@ -193,6 +197,50 @@ body {
   padding: 20px;
   border-radius: 10px;
   height: 360px;
+  overflow: auto;
+}
+
+.header-info-history{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.header-info-history h2{
+  font: var(--subtitle-sm);
+  color: var(--gray-500);
+}
+
+.header-info-history p{
+  font: var(--text-xs);
+  color: var(--gray-500);
+}
+
+.container-info-history {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.container-info-history h3 {
+  font: var(--subtitle-sm);
+  color: var(--gray-600)
+ }
+
+ .container-info-history span {
+  font: var(--text-xs);
+  color: var(--gray-500);
+ }
+
+.container-seal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-seal img {
+  height: 32px;
+  width: 32px;
 }
 
 /* LOYALTY CARD */
