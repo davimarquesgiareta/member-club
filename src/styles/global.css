@@ -44,76 +44,170 @@ body {
   display: grid;
   gap: 20px;
   padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "logo logo"
+    "search search"
+    "user loyalty"
+    "history cuts";
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-itens-center {
+  align-items: center;
 }
 
 /* Layout desktop */
-@media (min-width: 769px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "logo logo"
-      "search search"
-      "user loyalty"
-      "history cuts";
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 
-  .logo {
-    grid-area: logo;
-    text-align: center;
-  }
+/* HEADER */
+.logo {
+  grid-area: logo;
+  text-align: center;
+}
 
-  .search {
-    grid-area: search;
-    display: flex;
-    justify-content: center;
-  }
+.logo img {
+  height: 56px;
+  width: 116px;
+}
 
-  .search input {
-    padding: 10px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+.search {
+  grid-area: search;
+  display: flex;
+  justify-content: center;
+}
 
-  .search button {
-    padding: 10px;
-    margin-left: 10px;
-    border: none;
-    background-color: #555;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-  }
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: var(--gray-400);
+  width: 400px;
+  height: 56px;
+  transition: border-color 0.3s ease;
+}
 
-  .user-info {
-    grid-area: user;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
+.input-container:focus-within {
+  border-color: var(--pink);
+  border-width: 1.5px;
+}
 
-  .history {
-    grid-area: history;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
+.input-container input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  color: #7a6e76;
+  background-color: transparent;
+}
 
-  .loyalty-card {
-    grid-area: loyalty;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+}
 
-  .cuts-remaining {
-    grid-area: cuts;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
+.input-container input:not(:placeholder-shown) ~ .icon-container {
+  background-color: var(--gray-700);
+}
+
+.icon-container img {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+/* USER INFO */
+
+.user-info {
+  grid-area: user;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  height: 90px;
+}
+
+.profile-picture {
+  width: 56px; 
+  height: 56px;
+  padding: 5px;
+  border-radius: 20%; 
+  background: var(--gradient-base);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 0%; 
+  background-color: white;
+}
+
+.info-profile{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.info-profile h2{
+  font: var(--title-sm);
+  color: var(--gray-600)
+}
+
+.info-profile p{
+  font: var(--text-xs);
+  color: var(--gray-500);
+}
+/* HISTORY */
+
+.history {
+  grid-area: history;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* LOALTY CARD */
+
+.loyalty-card {
+  grid-area: loyalty;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CUTS REMAINING */
+
+.cuts-remaining {
+  grid-area: cuts;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Layout mobile */
@@ -129,26 +223,15 @@ body {
     margin-bottom: 10px;
   }
 
+  .logo img {
+    height: 56px;
+    width: 116px;
+  }
+
   .search {
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
-  }
-
-  .search input {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .search button {
-    padding: 10px;
-    margin-left: 10px;
-    border: none;
-    background-color: #555;
-    color: white;
-    border-radius: 4px;
   }
 
   .user-info,
