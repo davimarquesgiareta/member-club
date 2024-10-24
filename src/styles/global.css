@@ -44,11 +44,13 @@ body {
   display: grid;
   gap: 20px;
   padding: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0fr 1fr;
   grid-template-areas:
     "logo logo"
     "search search"
     "user loyalty"
+    "history loyalty"
+    "history loyalty"
     "history cuts";
   max-width: 1200px;
   margin: 0 auto;
@@ -149,10 +151,10 @@ body {
 }
 
 .profile-picture {
-  width: 56px; 
+  width: 56px;
   height: 56px;
   padding: 5px;
-  border-radius: 20%; 
+  border-radius: 20%;
   background: var(--gradient-base);
   display: flex;
   justify-content: center;
@@ -162,24 +164,24 @@ body {
 .profile-picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  border-radius: 0%; 
+  object-fit: cover;
+  border-radius: 0%;
   background-color: white;
 }
 
-.info-profile{
+.info-profile {
   display: flex;
   align-items: center;
   width: 100%;
   margin-left: 1rem;
 }
 
-.info-profile h2{
+.info-profile h2 {
   font: var(--title-sm);
-  color: var(--gray-600)
+  color: var(--gray-600);
 }
 
-.info-profile p{
+.info-profile p {
   font: var(--text-xs);
   color: var(--gray-500);
 }
@@ -190,15 +192,18 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+  height: 360px;
 }
 
-/* LOALTY CARD */
+/* LOYALTY CARD */
 
 .loyalty-card {
   grid-area: loyalty;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+  height: 333px;
+  width: 568px;
 }
 
 /* CUTS REMAINING */
@@ -208,6 +213,7 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
+  height: 117px;
 }
 
 /* Layout mobile */
