@@ -248,10 +248,65 @@ body {
 .loyalty-card {
   grid-area: loyalty;
   background-color: white;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   height: 333px;
   width: 568px;
+}
+
+.header-loyalty{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.loyalty-card h3{
+  color: var(--gray-500);
+  font : var(--subtitle-sm);
+}
+
+.loyalty-card p{
+  color: var(--gray-500);
+  font : var(--text-sm);
+}
+
+.loyalty-seal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  background-color: var(--gray-200);
+}
+
+.user-id{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-300);
+  color: var(--gray-500);
+  border-radius: 20px;
+  font: var(--subtitle-md);
+  padding: 1rem;
+  height: 32px;
+}
+
+.container-seal-list{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.pin-check{
+  height: 64px;
+  width: 64px;
+}
+
+.gift-fill {
+  height: 40px;
+  width: 40px;
 }
 
 /* CUTS REMAINING */
