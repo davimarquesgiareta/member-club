@@ -200,18 +200,18 @@ body {
   overflow: auto;
 }
 
-.header-info-history{
+.header-info-history {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
 }
 
-.header-info-history h2{
+.header-info-history h2 {
   font: var(--subtitle-sm);
   color: var(--gray-500);
 }
 
-.header-info-history p{
+.header-info-history p {
   font: var(--text-xs);
   color: var(--gray-500);
 }
@@ -224,15 +224,15 @@ body {
 
 .container-info-history h3 {
   font: var(--subtitle-sm);
-  color: var(--gray-600)
- }
+  color: var(--gray-600);
+}
 
- .container-info-history span {
+.container-info-history span {
   font: var(--text-xs);
   color: var(--gray-500);
- }
+}
 
-.container-seal{
+.container-seal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,23 +254,23 @@ body {
   width: 568px;
 }
 
-.header-loyalty{
+.header-loyalty {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 
-.loyalty-card h3{
+.loyalty-card h3 {
   color: var(--gray-500);
-  font : var(--subtitle-sm);
+  font: var(--subtitle-sm);
 }
 
-.loyalty-card p{
+.loyalty-card p {
   color: var(--gray-500);
-  font : var(--text-sm);
+  font: var(--text-sm);
 }
 
-.loyalty-seal{
+.loyalty-seal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,7 +280,7 @@ body {
   background-color: var(--gray-200);
 }
 
-.user-id{
+.user-id {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,14 +292,14 @@ body {
   height: 32px;
 }
 
-.container-seal-list{
+.container-seal-list {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
 }
 
-.pin-check{
+.pin-check {
   height: 64px;
   width: 64px;
 }
@@ -315,9 +315,57 @@ body {
   grid-area: cuts;
   background-color: white;
   padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   border-radius: 10px;
   height: 117px;
 }
+
+.number-cuts-reamaining {
+  color: var(--gray-500);
+  font: var(--title-md);
+}
+
+.text-cuts-remaining {
+  color: var(--gray-500);
+  font: var(--text-md);
+}
+
+.count-cuts-reamaining {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  color: var(--gray-500);
+  font: var(--text-xs);
+}
+
+.container-gift{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  background-color: var(--gray-200);
+  border-radius: 50%;
+}
+
+.icon-pin-gift{
+  height: 72px;
+  margin-top: 10px;
+}
+
+.cointainer-cuts-remaining{
+  width: 400px;
+
+}
+
+progress { 
+  margin-top: 0.5rem;
+  width: 300px;
+}
+
+
 
 /* Layout mobile */
 @media (max-width: 768px) {
