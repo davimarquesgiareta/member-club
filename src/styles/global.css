@@ -357,15 +357,31 @@ body {
 
 .cointainer-cuts-remaining{
   width: 400px;
-
 }
 
-progress { 
+.progress-container {
+  width: 350px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 70%; /* Ajuste de preenchimento, 70% neste exemplo */
+  background: var(--gradient-base);
+  border-radius: 15px;
+}
+
+.container-remaining-cuts{
+  display: flex;
+  height: 10px;
+  margin-top: 10px;
+}
+
+.progress { 
   margin-top: 0.5rem;
   width: 300px;
 }
-
-
 
 /* Layout mobile */
 @media (max-width: 768px) {
