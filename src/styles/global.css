@@ -384,7 +384,7 @@ body {
 }
 
 /* Layout mobile */
-@media (max-width: 768px) {
+@media (max-width: 922px) {
   body {
     display: block;
   }
