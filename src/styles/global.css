@@ -340,7 +340,7 @@ body {
   font: var(--text-xs);
 }
 
-.container-gift{
+.container-gift {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,12 +350,12 @@ body {
   border-radius: 50%;
 }
 
-.icon-pin-gift{
+.icon-pin-gift {
   height: 72px;
   margin-top: 10px;
 }
 
-.cointainer-cuts-remaining{
+.cointainer-cuts-remaining {
   width: 400px;
 }
 
@@ -372,24 +372,28 @@ body {
   border-radius: 15px;
 }
 
-.container-remaining-cuts{
+.container-remaining-cuts {
   display: flex;
   height: 10px;
   margin-top: 10px;
 }
 
-.progress { 
+.progress {
   margin-top: 0.5rem;
   width: 300px;
 }
 
 /* Layout mobile */
 @media (max-width: 768px) {
+  body {
+    display: block;
+  }
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    gap: 1px;
   }
 
   .logo {
@@ -407,6 +411,35 @@ body {
     text-align: center;
   }
 
+  .header-loyalty > div:first-child {
+    width: 50%;
+  }
+
+  .header-loyalty h3 {
+    font: var(--subtitle-sm);
+  }
+
+  .header-loyalty p {
+    font: var(--text-xs);
+  }
+
+  .container-remaining-cuts > div:first-child {
+    width: 75%;
+  }
+
+  .container-gift {
+    height: 56px;
+    width: 56px;
+  }
+
+  .user-id {
+    font: var(--subtitle-sm);
+  }
+
+  .loyalty-card {
+    height: auto;
+  }
+
   .user-info,
   .loyalty-card,
   .cuts-remaining,
@@ -416,6 +449,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    height: auto;
   }
 
   /* Ordem Mobile */
@@ -431,5 +465,22 @@ body {
 
   .history {
     order: 4;
+  }
+}
+
+@media (max-width: 500px){
+  .loyalty-seal {
+    width: 56px;
+    height: 56px;
+  }
+
+  .pin-check {
+    height: 40px;
+    width: 40px;
+  }
+
+  .gift-fill {
+    height: 30px;
+    width: 30px;
   }
 }
