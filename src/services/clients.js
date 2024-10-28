@@ -1,18 +1,20 @@
-import { apiConfig } from "./api-config";
+import { apiConfig } from "./api-config.js";
 
-export async function getClients(clientId) {
-  console.log('base url', apiConfig.baseUrl)
-  console.log("id do cliente",clientId)
-  // try {
-  //   console.log("idCostumer", clientId);
-  //   await fetch(`${apiConfig.baseUrl}/clients/${idClient}`, {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
-  // } catch (error) {
-  //   console.log(error);
-  //   alert("Não foi possível encontrar o cliente");
-  // }
+export async function getClient(clientId) {
+ 
+  try {
+    const response = await fetch(`${apiConfig.baseUrl}/clients/${clientId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.log(error);
+    // alert("Não foi possível encontrar o cliente");
+  }
 }

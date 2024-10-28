@@ -13,175 +13,89 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
-<div class="container">
-	<!-- Logo -->
-	<div class="logo">
-		<img src="../src/assets/Logo.png" alt="Logo Member Club" />
-	</div>
-
-	<!-- Input de pesquisa -->
-	<div class="search">
-		<div class="input-container">
-			<input id="search" type="text" placeholder="ID do cartão" />
-			<div class="icon-container">
-				<img src="../src/icons/arrow-elbow-down-left.svg" alt="Ícone de seta" />
-			</div>
+<div>
+	<div class="container">
+		<!-- Logo -->
+		<div class="logo">
+			<img src="../src/assets/Logo.png" alt="Logo Member Club" />
 		</div>
-	</div>
-
-	<!-- Info do usuário -->
-	<div class="user-info">
-		<div class="d-flex">
-			<div>
-				<div class="profile-picture">
-					<img src="../src/assets/diego.png" alt="Foto de perfil">
-				</div>
-			</div>
-			<div class="info-profile">
-				<div>
-					<h2>Diegola Salles</h2>
-					<p>Cliente desde 18/09/2023</p>
+	
+		<!-- Input de pesquisa -->
+		<div class="search">
+			<div class="input-container">
+				<input id="search" type="text" placeholder="ID do cartão" />
+				<div class="icon-container">
+					<img src="../src/icons/arrow-elbow-down-left.svg" alt="Ícone de seta" />
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Histórico -->
-	<div class="history">
-		<div class="header-info-history">
-			<h2>Histórico</h2>
-			<p>7 cortes</p>
-		</div>
-		<hr />
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-		<div class="container-info-history">
-			<div>
-				<h3>29/04/2024</h3>
-				<span>18:30</span>
-			</div>
-			<div class="container-seal">
-				<img src="../src/assets/green-check.png" alt="Selo verde">
-			</div>
-		</div>
-	</div>
-
-	<!-- Cartão fidelidade -->
-	<div class="loyalty-card">
-		<div class="header-loyalty">
-			<div>
-				<h3>CARTÃO FIDELIDADE</h3>
-				<p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
-			</div>
-			<div class="user-id">ID: 124-537-835-230</div>
-		</div>
-		<div class="container-seal-list">
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-		</div>
-		<div class="container-seal-list">
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-			<div class="loyalty-seal">
-				<img class="pin-check" src="../src/assets/PinCheck.png" alt="Selo">
-			</div>
-			<div class="loyalty-seal">
-
-			</div>
-			<div class="loyalty-seal">
-
-			</div>
-			<div class="loyalty-seal">
-				<img class="gift-fill" src="../src/icons/gift-fill.svg" alt="Selo">
-			</div>
-		</div>
-	</div>
-
-	<!-- Cortes restantes -->
-	<div class="cuts-remaining">
-		<div class="d-flex space-between align-itens-center">
-			<div class="cointainer-cuts-remaining">
-				<div> <span class="number-cuts-reamaining">3</span> <span class="text-cuts-remaining">cortes restantes</span>
-				</div>
-				<div class="container-remaining-cuts">
-					<div class="progress-container">
-						<div class="progress-bar"></div>
+	
+		<div class="client-container">
+			<!-- Info do usuário -->
+			<div class="user-info">
+				<div class="d-flex">
+					<div>
+						<div class="profile-picture">
+						</div>
 					</div>
-					<div class="count-cuts-reamaining">7 de 10</div>
+					<div class="info-profile">
+						<div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="container-gift">
-				<img class="icon-pin-gift" src="../src/assets/PinGift.png" alt="Presente">
+	
+			<!-- Histórico -->
+			<div class="history">
+				<div class="header-info-history">
+					<h2>Histórico</h2>
+				</div>
+				<hr />
+				<!-- setHistoryInfo() -->
+			</div>
+	
+			<!-- Cartão fidelidade -->
+			<div class="loyalty-card">
+				<div class="header-loyalty">
+					<div>
+						<h3>CARTÃO FIDELIDADE</h3>
+						<p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
+					</div>
+					<div class="user-id"></div>
+				</div>
+				<div class="container-seal-list-top">
+				</div>
+				<div class="container-seal-list-down">
+				</div>
+			</div>
+	
+			<!-- Cortes restantes -->
+			<div class="cuts-remaining">
+				<div class="d-flex space-between align-itens-center">
+					<div class="cointainer-cuts-remaining">
+						<div> <span class="number-cuts-reamaining">3</span> <span class="text-cuts-remaining">cortes restantes</span>
+						</div>
+						<div class="container-remaining-cuts">
+							<div class="progress-container">
+								<div class="progress-bar"></div>
+							</div>
+							<div class="count-cuts-reamaining"></div>
+						</div>
+					</div>
+					<div class="container-gift">
+						<img class="icon-pin-gift" src="../src/assets/PinGift.png" alt="Presente">
+					</div>
+				</div>
 			</div>
 		</div>
+	</div>
+	<div class="no-client-founded">
+		Nenhum cliente encontrado broder...
 	</div>
 </div>
+
+
+
 
 <script src="./main.js" type="module"></script>
 </body>

@@ -31,9 +31,9 @@
           }
         ],
         "loyaltyCard": {
-          "totalCuts": 7,
+          "totalCuts": 6,
           "cutsNeeded": 10,
-          "cutsRemaining": 3
+          "cutsRemaining": 4
         }
       },
       {
@@ -41,6 +41,30 @@
         "name": "Capitão Nascimento",
         "clientSince": "12/04/2023",
         "appointmentHistory": [
+          {
+            "date": "21/11/2024",
+            "time": "10:00"
+          },
+          {
+            "date": "13/10/2024",
+            "time": "11:00"
+          },
+          {
+            "date": "30/09/2024",
+            "time": "10:00"
+          },
+          {
+            "date": "13/08/2024",
+            "time": "10:00"
+          },
+          {
+            "date": "11/07/2024",
+            "time": "12:00"
+          },
+          {
+            "date": "03/06/2024",
+            "time": "09:00"
+          },
           {
             "date": "01/05/2024",
             "time": "10:00"
@@ -59,9 +83,9 @@
           }
         ],
         "loyaltyCard": {
-          "totalCuts": 4,
+          "totalCuts": 10,
           "cutsNeeded": 10,
-          "cutsRemaining": 6
+          "cutsRemaining": 0
         }
       },
       {
@@ -87,9 +111,9 @@
           }
         ],
         "loyaltyCard": {
-          "totalCuts": 5,
-          "cutsNeeded": 8,
-          "cutsRemaining": 3
+          "totalCuts": 4,
+          "cutsNeeded": 10,
+          "cutsRemaining": 6
         }
       }
     ]

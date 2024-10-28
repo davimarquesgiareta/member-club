@@ -56,6 +56,17 @@ body {
   margin: 0 auto;
 }
 
+.client-container{
+  display: contents;
+}
+
+.no-client-founded{
+  display: flex;
+  background-color: #2daa6e;
+  width: auto;
+  display: none;
+}
+
 .d-flex {
   display: flex;
 }
@@ -292,11 +303,11 @@ body {
   height: 32px;
 }
 
-.container-seal-list {
+.container-seal-list-top, .container-seal-list-down {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  gap: 1rem;
+  gap: 1rem;  
 }
 
 .pin-check {
