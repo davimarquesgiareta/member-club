@@ -43,7 +43,7 @@ function setUserInfo() {
   const infoProfileContainer = document.querySelector(".info-profile > div");
 
   const img = document.createElement("img");
-  img.src = "../src/assets/diego.png";
+  img.src = client.photo;
   img.alt = "Foto de perfil";
   profilePictureContainer.appendChild(img);
 
@@ -167,7 +167,7 @@ function cleanCutsRemainingInfo() {
     paragraph.remove();
   }
 
-  const spanToRemove = document.querySelector(".number-cuts-remaining");
+  const spanToRemove = document.querySelector(".number-cuts-reamaining");
 
   if (spanToRemove) {
     spanToRemove.remove();
