@@ -14,14 +14,13 @@ async function getClientInfo() {
   client = await getClient(clientId);
   cleanClientInfo();
 
-  if (client != undefined) {
+  if (client != undefined && searchInput.value != "") {
     clientContainerDiv.style.display = "contents";
     noClientFoundedDiv.style.display = "none";
   } else {
     clientContainerDiv.style.display = "none";
-    noClientFoundedDiv.style.display = "contents";
+    noClientFoundedDiv.style.display = "flex";
   }
-  console.log("cliente:", client);
   setClientInfo();
 }
 
@@ -118,12 +117,17 @@ function setCutsRemainingInfo() {
   p.textContent = `${client.loyaltyCard.totalCuts} de 10`;
   countCutsRemaining.appendChild(p);
 
-	const numberCutsReamaining = document.querySelector(".cointainer-cuts-remaining > div");
+  const remainingCuts = client.loyaltyCard.cutsRemaining;
 
-	const span = document.createElement("span");
-	span.style.display = "number-cuts-reamaining";
-	span.textContent = '2';
-	numberCutsReamaining.appendChild(span);
+  const newSpan = document.createElement("span");
+  newSpan.className = "number-cuts-reamaining";
+  newSpan.textContent = remainingCuts;
+
+  const textCutsRemaining = document.querySelector(".text-cuts-remaining");
+
+  if (textCutsRemaining && textCutsRemaining.parentNode) {
+    textCutsRemaining.parentNode.insertBefore(newSpan, textCutsRemaining);
+  }
 }
 
 function cleanUserInfo() {
@@ -139,7 +143,7 @@ function cleanUserInfo() {
 
 function cleanHistoryInfo() {
   const paragraph = document.querySelector(".header-info-history > p");
-  console.log("paragrafo", paragraph);
+ 
   if (paragraph != null) {
     paragraph.remove();
   }
@@ -163,13 +167,11 @@ function cleanCutsRemainingInfo() {
     paragraph.remove();
   }
 
-	const cutsRemaing = document.querySelector(".cointainer-cuts-remaining > div span");
-	console.log("cutsRemaing cutsRemaing ", cutsRemaing)
-	if (cutsRemaing  != null) {
-    cutsRemaing.remove();
+  const spanToRemove = document.querySelector(".number-cuts-remaining");
+
+  if (spanToRemove) {
+    spanToRemove.remove();
   }
-
-
 }
 
 function setSealListTop(cuts) {
@@ -223,4 +225,23 @@ searchInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     getClientInfo();
   }
+});
+
+searchInput.addEventListener("input", (e) => {
+
+  let input = e.target.value.replace(/\D/g, "");
+
+  if (input.length > 12) {
+      input = input.slice(0, 12);
+  }
+
+  if (input.length > 3 && input.length <= 6) {
+      input = input.slice(0, 3) + '-' + input.slice(3);
+  } else if (input.length > 6 && input.length <= 9) {
+      input = input.slice(0, 3) + '-' + input.slice(3, 6) + '-' + input.slice(6);
+  } else if (input.length > 9) {
+      input = input.slice(0, 3) + '-' + input.slice(3, 6) + '-' + input.slice(6, 9) + '-' + input.slice(9, 12);
+  }
+
+  e.target.value = input;
 });

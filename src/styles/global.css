@@ -62,9 +62,10 @@ body {
 
 .no-client-founded{
   display: flex;
-  background-color: #2daa6e;
   width: auto;
   display: none;
+  justify-content: center;
+  font-weight: 600;
 }
 
 .d-flex {
@@ -340,6 +341,7 @@ body {
 .text-cuts-remaining {
   color: var(--gray-500);
   font: var(--text-md);
+  margin-left: 5px;
 }
 
 .count-cuts-reamaining {
