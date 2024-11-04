@@ -15,6 +15,5 @@ export async function getClient(clientId) {
 
   } catch (error) {
     console.log(error);
-    // alert("Não foi possível encontrar o cliente");
   }
 }
