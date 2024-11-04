@@ -22,6 +22,10 @@ async function getClientInfo() {
     noClientFoundedDiv.style.display = "flex";
   }
   setClientInfo();
+
+  if (client.loyaltyCard.cutsRemaining == 0) {
+    modal.style.display = "block";
+  }
 }
 
 function setClientInfo() {
@@ -245,3 +249,27 @@ searchInput.addEventListener("input", (e) => {
 
   e.target.value = input;
 });
+
+
+// Obtém o modal
+const modal = document.getElementById("modal");
+
+// Obtém o botão que abre o modal
+const btn = document.getElementById("openModal");
+
+// Obtém o elemento <span> que fecha o modal
+const span = document.getElementById("closeModal");
+
+// Quando o usuário clica no botão, abre o modal
+
+// Quando o usuário clica na <span> (x), fecha o modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Quando o usuário clica em qualquer lugar fora do modal, fecha o modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
