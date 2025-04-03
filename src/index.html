@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../src/assets/favicon.ico" type="image/x-icon">
+	<title>Member Club</title>
+	<link rel="stylesheet" href="styles/index.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+		<div class="container">
+			<!-- Logo -->
+			<div class="logo">
+				<img src="../src/assets/Logo.png" alt="Logo Member Club" />
+			</div>
+
+			<!-- Input de pesquisa -->
+			<div class="search">
+				<div class="input-container">
+					<input id="search" type="text" placeholder="ID do cartão" />
+					<div class="icon-container">
+						<img src="../src/icons/arrow-elbow-down-left.svg" alt="Ícone de seta" />
+					</div>
+				</div>
+			</div>
+
+			<div class="client-container">
+				<!-- Info do usuário -->
+				<div class="user-info">
+					<div class="d-flex">
+						<div>
+							<div class="profile-picture">
+							</div>
+						</div>
+						<div class="info-profile">
+							<div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Histórico -->
+				<div class="history">
+					<div class="header-info-history">
+						<h2>Histórico</h2>
+					</div>
+					<hr />
+					<!-- setHistoryInfo() -->
+				</div>
+
+				<!-- Cartão fidelidade -->
+				<div class="loyalty-card">
+					<div class="header-loyalty">
+						<div>
+							<h3>CARTÃO FIDELIDADE</h3>
+							<p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
+						</div>
+						<div class="user-id"></div>
+					</div>
+					<div class="container-seal-list-top">
+					</div>
+					<div class="container-seal-list-down">
+					</div>
+				</div>
+
+				<!-- Cortes restantes -->
+				<div class="cuts-remaining">
+					<div class="d-flex space-between align-itens-center">
+						<div class="cointainer-cuts-remaining">
+							<div> <span class="text-cuts-remaining">cortes restantes</span>
+							</div>
+							<div class="container-remaining-cuts">
+								<div class="progress-container">
+									<div class="progress-bar"></div>
+								</div>
+								<div class="count-cuts-reamaining"></div>
+							</div>
+						</div>
+						<div class="container-gift">
+							<img class="icon-pin-gift" src="../src/assets/PinGift.png" alt="Presente">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="no-client-founded">
+			ID inválido ou inexistente.
+		</div>
+		<div class="modal" id="modal">
+			<div class="modal-content">
+					<span class="close" id="closeModal">&times;</span>
+					<h2>Parabéns!</h2>
+					<p>Seu próximo corte é gratuito.</p>
+			</div>
+	</div>
+	</div>
+	<script src="./main.js" type="module"></script>
+</body>
+
+</html>
